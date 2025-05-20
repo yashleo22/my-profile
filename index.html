@@ -503,6 +503,63 @@
             background: var(--primary-color);
             color: #fff;
         }
+
+        /* Certifications grid and card styles */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .cert-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.07);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .cert-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.13);
+        }
+        .cert-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            transition: color 0.3s;
+        }
+        .cert-card:hover i {
+            color: var(--accent-color);
+        }
+        .cert-card .cert-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .cert-card .cert-issuer {
+            color: var(--secondary-color);
+            font-size: 0.98rem;
+            margin-bottom: 0.5rem;
+        }
+        .cert-card .cert-details {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .cert-card:hover .cert-details {
+            opacity: 1;
+            max-height: 100px;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -763,25 +820,76 @@
             <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card" data-aos="flip-left">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800" alt="Project 1">
+                    <img src="unify.jpg" alt="Unify Dashboard">
                     <div class="project-info">
-                        <h3>E-commerce Platform</h3>
-                        <p>A full-featured e-commerce platform built with React and Node.js.</p>
+                        <h3>Unify</h3>
+                        <p>Integrated Operations and Billing Platform for Service Providers</p>
                     </div>
                 </div>
                 <div class="project-card" data-aos="flip-left" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800" alt="Project 2">
+                    <img src="udaya.jpg" alt="Udaya Networks">
                     <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management application with real-time updates.</p>
+                        <h3>Udaya</h3>
+                        <p>Managed Wi-Fi Solution for Businesses, Social Zones, and Visitor Hotspots</p>
                     </div>
                 </div>
                 <div class="project-card" data-aos="flip-left" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="Project 3">
+                    <img src="msg.jpg" alt="MSG Gateway">
                     <div class="project-info">
-                        <h3>Social Media Dashboard</h3>
-                        <p>Analytics dashboard for social media management.</p>
+                        <h3>MSG</h3>
+                        <p>Hotspot Gateway Management System</p>
                     </div>
+                </div>
+                <div class="project-card" data-aos="flip-left" data-aos-delay="300">
+                    <img src="dsr.jpg" alt="DSR Digital Lock">
+                    <div class="project-info">
+                        <h3>DSR</h3>
+                        <p>Middleware for Configuring Smart Locks and Managing Authentication & Authorization</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="flip-left" data-aos-delay="400">
+                    <img src="eshop.jpg" alt="eShop Cart Shopping">
+                    <div class="project-info">
+                        <h3>eShop</h3>
+                        <p>B2C E-Commerce Platform for Purchasing Smart Locks and Accessories</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="flip-left" data-aos-delay="500">
+                    <img src="wis.jpg" alt="WIS Reporting Data">
+                    <div class="project-info">
+                        <h3>WIS</h3>
+                        <p>Warranty Information System for Analytics and Strategic Business Decisions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="certifications" data-aos="fade-up">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <div class="cert-title">PMP - Project Management Professional</div>
+                    <div class="cert-issuer">Issued by PMI - Project Management Institute</div>
+                    <div class="cert-details">Globally recognized certification for project managers, demonstrating expertise in leading and directing projects.</div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-sitemap"></i>
+                    <div class="cert-title">Scrum Master Certified (SMC)</div>
+                    <div class="cert-issuer">Issued by Scrum Alliance</div>
+                    <div class="cert-details">Certification for Scrum Masters, validating knowledge of agile and Scrum practices for effective team facilitation.</div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-robot"></i>
+                    <div class="cert-title">Generative AI Overview for Project Managers</div>
+                    <div class="cert-issuer">Issued by PMI - Project Management Institute</div>
+                    <div class="cert-details">Covers the essentials of generative AI and its impact on project management and delivery.</div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-title">OCJP - Oracle Certified Java Professional</div>
+                    <div class="cert-issuer">Issued by Oracle</div>
+                    <div class="cert-details">Professional certification for Java developers, demonstrating advanced programming skills and expertise.</div>
                 </div>
             </div>
         </section>
