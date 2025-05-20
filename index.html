@@ -464,9 +464,59 @@
                 padding: 1.5rem;
             }
         }
+
+        /* Sticky Navigation Bar */
+        nav.navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1002;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0;
+            transition: background 0.3s;
+        }
+        nav.navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav.navbar li {
+            display: inline-block;
+        }
+        nav.navbar a {
+            color: var(--secondary-color);
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav.navbar a:hover, nav.navbar a.active {
+            background: var(--primary-color);
+            color: #fff;
+        }
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <div class="floating-icons">
         <i class="fab fa-html5 floating-icon" style="top: 10%; left: 10%;"></i>
         <i class="fab fa-css3-alt floating-icon" style="top: 20%; left: 80%;"></i>
@@ -744,6 +794,11 @@
                 <span class="language-tag" data-aos="zoom-in" data-aos-delay="200">Japanese (Basic)</span>
             </div>
         </section>
+
+        <section class="section" id="contact" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:yash.leo22@gmail.com" style="color:var(--primary-color);text-decoration:underline;">yash.leo22@gmail.com</a> or connect with me on LinkedIn.</p>
+        </section>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -785,6 +840,25 @@
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Highlight active nav link on scroll
+        const navLinks = document.querySelectorAll('nav.navbar a');
+        const sections = Array.from(document.querySelectorAll('section.section'));
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 80;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
             });
         });
     </script>
