@@ -687,6 +687,108 @@
         .contact-card:hover .contact-info p {
              color: var(--secondary-color);
         }
+
+        /* Education Section Styles (similar to Timeline) */
+        .education-list {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .education-list::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary-color);
+            animation: pulse 2s infinite;
+        }
+
+        .education-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+            cursor: pointer;
+        }
+
+        .education-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .education-item:hover::before {
+            background: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        .education-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .education-item .duration {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item .institution {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .education-item .icon {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover .icon {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            /* Adjust Education Timeline */
+            .education-list {
+                padding-left: 1.5rem;
+            }
+
+            .education-list::before {
+                left: 0.5rem;
+            }
+
+            .education-item::before {
+                 left: -1rem;
+            }
+
+            .education-item {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -697,6 +799,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#languages">Languages</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1023,6 +1126,31 @@
             </div>
         </section>
 
+        <section class="section" id="education" data-aos="fade-up">
+            <h2>Education</h2>
+            <div class="education-list">
+                <div class="education-item" data-aos="fade-right">
+                    <i class="fas fa-graduation-cap icon"></i>
+                    <div class="education-info">
+                        <h3>Bachelor's Degree</h3>
+                        <div class="duration">2005 - 2009</div>
+                        <p class="institution">Bachelor of Computer Engineering</p>
+                        <p class="institution">Jodhpur Engineering College and Research Centre, Jodhpur</p>
+                    </div>
+                </div>
+
+                <div class="education-item" data-aos="fade-right" data-aos-delay="100">
+                    <i class="fas fa-school icon"></i>
+                    <div class="education-info">
+                        <h3>High School</h3>
+                        <div class="duration">2003 - 2005</div>
+                        <p class="institution">Senior Secondary (CBSE)</p>
+                        <p class="institution">St. Anne's School, Jodhpur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="languages" data-aos="fade-up">
             <h2>Languages</h2>
             <div class="languages">
@@ -1119,6 +1247,12 @@
         // Highlight active nav link on scroll
         const navLinks = document.querySelectorAll('nav.navbar a');
         const sections = Array.from(document.querySelectorAll('section.section'));
+        const educationSection = document.querySelector('section#education');
+        if(educationSection) {
+            sections.push(educationSection);
+        }
+        sections.sort((a, b) => a.offsetTop - b.offsetTop);
+
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
