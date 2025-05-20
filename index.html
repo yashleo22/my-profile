@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Portfolio</title>
+    <title>Yash Yadav - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
@@ -156,15 +156,29 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
         }
 
         .skill-card {
             background: var(--bg-color);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -189,20 +203,45 @@
         }
 
         .skill-card:hover {
-            transform: translateY(-5px) scale(1.02);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card .description {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-card:hover .description {
+            opacity: 1;
+            max-height: 100px;
+            margin-top: 0.5rem;
         }
 
         .skill-card i {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
         }
 
         .skill-card:hover i {
-            transform: scale(1.2) rotate(10deg);
+            transform: scale(1.2);
             color: var(--accent-color);
         }
 
@@ -231,31 +270,89 @@
         .timeline-item {
             position: relative;
             margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 5px;
+            padding: 1.5rem;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            background: var(--bg-color);
+            cursor: pointer;
         }
 
         .timeline-item:hover {
-            background: var(--bg-color);
             transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
             left: -2.5rem;
-            top: 1rem;
+            top: 1.5rem;
             width: 1rem;
             height: 1rem;
             border-radius: 50%;
             background: var(--primary-color);
             transition: all 0.3s ease;
+            z-index: 1;
         }
 
         .timeline-item:hover::before {
             background: var(--accent-color);
             transform: scale(1.2);
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .timeline-item .company {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .duration {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .summary {
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item .description {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .description {
+            opacity: 1;
+            max-height: 500px;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item .icon {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .icon {
+            opacity: 0.5;
+            transform: scale(1.1);
         }
 
         .projects-grid {
@@ -381,48 +478,173 @@
 
     <header>
         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Profile Picture" class="profile-img">
-        <h1>John Doe</h1>
-        <p>Full Stack Developer | UI/UX Enthusiast | Problem Solver</p>
+        <h1>Yash Yadav</h1>
+        <p>Technical Program Manager | Engineering Leader | Driving Scalable Web Architectures & Agile Delivery 
+            | Java, Node.js, DevOps, Microservices | Project & Program Management | Problem Solver</p>
         <div class="social-links">
             <a href="#" target="_blank"><i class="fab fa-github"></i></a>
             <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="mailto:john@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:yash.leo22@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
 
     <div class="container">
         <section class="section" id="about" data-aos="fade-up">
             <h2>About Me</h2>
-            <p>I'm a passionate Full Stack Developer with 5 years of experience in building web applications. I love creating intuitive and efficient solutions to complex problems. When I'm not coding, you can find me hiking, reading tech blogs, or experimenting with new technologies.</p>
+            <p>I'm a seasoned Technical Program Manager with 15+ years of experience, combining a strong software engineering background with proven leadership in delivering complex, cross-functional programs.
+
+                I've led initiatives across e-commerce, networking, manufacturing, banking, and GIS domains — aligning business goals with scalable technical solutions.
+                
+                With deep hands-on expertise in Java, Node.js, MongoDB, PostgreSQL, and modern DevOps practices using AWS tools, I bridge the gap between technical execution and strategic delivery.
+                
+                I specialize in driving Agile program management, enhancing cross-team collaboration, and continuously improving engineering processes for faster, more reliable outcomes. When I'm free you can find me hiking, reading tech blogs, or 
+                experimenting with new technologies.</p>
         </section>
 
         <section class="section" id="skills" data-aos="fade-up">
             <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
+                <div class="skill-category" data-aos="fade-up">
+                    <h3>Core Competencies</h3>
+                    <div class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Technical Expertise</h4>
+                        <div class="description">Understand system architecture, APIs & dev workflows</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-tasks"></i>
+                        <h4>Program Management</h4>
+                        <div class="description">Drive cross-team projects from planning to delivery</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-chess"></i>
+                        <h4>Strategic Thinking</h4>
+                        <div class="description">Align tech execution with business goals</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h4>Problem Solving</h4>
+                        <div class="description">Identify risks, resolve issues, keep teams unblocked</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-comments"></i>
+                        <h4>Communication</h4>
+                        <div class="description">Bridge engineers, PMs & execs with clear updates</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Data-Driven Decisions</h4>
+                        <div class="description">Use metrics & insights to prioritize and improve</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Collaboration</h4>
+                        <div class="description">Work across engineering, product, QA, design & ops</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-sync"></i>
+                        <h4>Agile Execution</h4>
+                        <div class="description">Run standups, sprints, backlogs & retros</div>
+                    </div>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-card">
+                        <i class="fas fa-heart"></i>
+                        <h4>Empathy</h4>
+                        <div class="description">Understand and share the feelings of others</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-ear"></i>
+                        <h4>Active Listening</h4>
+                        <div class="description">Fully concentrate and understand what others are saying</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-mountain"></i>
+                        <h4>Calm Under Pressure</h4>
+                        <div class="description">Maintain composure in challenging situations</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Decision-Making</h4>
+                        <div class="description">Make timely and effective decisions</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-folder-tree"></i>
+                        <h4>Organization</h4>
+                        <div class="description">Maintain structured and efficient workflows</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>Critical Thinking</h4>
+                        <div class="description">Analyze and evaluate complex situations</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-random"></i>
+                        <h4>Adaptability</h4>
+                        <div class="description">Pivot quickly when plans or priorities change</div>
+                    </div>
                 </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fab fa-react"></i>
-                    <h3>React</h3>
-                </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
-                    <i class="fab fa-node-js"></i>
-                    <h3>Node.js</h3>
-                </div>
-                <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
-                    <i class="fas fa-database"></i>
-                    <h3>MongoDB</h3>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-card">
+                        <i class="fas fa-sitemap"></i>
+                        <h4>System Design</h4>
+                        <div class="description">Understand architecture, APIs, microservices, etc.</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>Software Development Lifecycle (SDLC)</h4>
+                        <div class="description">Agile, Scrum, Kanban, CI/CD pipelines</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Security & Compliance</h4>
+                        <div class="description">Familiar with data privacy, OWASP, audits</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h4>Databases & Storage</h4>
+                        <div class="description">SQL/NoSQL(PostgreSQL, MySQL, MongoDB, Redis), data modeling, cloud storage</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-aws"></i>
+                        <h4>Cloud Platforms</h4>
+                        <div class="description">AWS</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-cogs"></i>
+                        <h4>DevOps Tools</h4>
+                        <div class="description">Jenkins, Docker, Kubernetes, Terraform</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Analytics & Metrics</h4>
+                        <div class="description">Dashboards, KPIs, OKRs, data-driven decision making</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-server"></i>
+                        <h4>Backend Tech</h4>
+                        <div class="description">Java, Node.js, Python, PHP</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Frontend Tech</h4>
+                        <div class="description">React.js, Angular, CSS3</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt"></i>
+                        <h4>Version Control</h4>
+                        <div class="description">Git, GitHub/GitLab</div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-lock"></i>
+                        <h4>Security</h4>
+                        <div class="description">OAuth2, JWT, HTTPS, CORS, SSL</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -431,19 +653,57 @@
             <h2>Work Experience</h2>
             <div class="timeline">
                 <div class="timeline-item" data-aos="fade-right">
-                    <h3>Senior Developer - Tech Corp</h3>
-                    <p>2021 - Present</p>
-                    <p>Leading development of enterprise web applications using React and Node.js.</p>
+                    <i class="fas fa-rocket icon"></i>
+                    <h3>Program Manager</h3>
+                    <div class="company">Inventum</div>
+                    <div class="duration">Nov 2022 - Present</div>
+                    <div class="summary">Driving cross-functional initiatives to deliver strategic outcomes on time and within budget.</div>
+                    <div class="description">As a Program Manager, I lead strategic programs and multiple projects that align with organizational goals. I oversee timelines, budgets, scopes, and ensure successful delivery by proactively managing risks, issues, and dependencies. Collaborating across departments, I ensure clear communication, accountability, and execution excellence at every stage.</div>
                 </div>
+
                 <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                    <h3>Full Stack Developer - Web Solutions</h3>
-                    <p>2019 - 2021</p>
-                    <p>Developed and maintained multiple client projects using modern web technologies.</p>
+                    <i class="fas fa-tasks icon"></i>
+                    <h3>Associate Manager Delivery</h3>
+                    <div class="company">Nagarro</div>
+                    <div class="duration">Jul 2019 - Nov 2022</div>
+                    <div class="summary">Led end-to-end delivery of fixed bid and T&M projects with focus on timelines, quality, and client satisfaction.</div>
+                    <div class="description">As a Delivery Manager, I oversaw the complete lifecycle of fixed bid and time & material projects, from scope definition and SOW creation to execution and closure. I ensured alignment with client expectations by managing milestones, risks, and budgets across waterfall and agile projects. I regularly engaged stakeholders, drove delivery governance, and built high-performing teams to achieve successful outcomes within cost and time constraints.</div>
                 </div>
+
                 <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
-                    <h3>Junior Developer - Startup Inc</h3>
-                    <p>2018 - 2019</p>
-                    <p>Worked on frontend development and UI/UX improvements.</p>
+                    <i class="fas fa-map-marked-alt icon"></i>
+                    <h3>Project Lead</h3>
+                    <div class="company">Cyient</div>
+                    <div class="duration">Sep 2015 - Jul 2019</div>
+                    <div class="summary">Led the transition of mapping tools from web to desktop for TomTom, while managing cross-project collaboration and team workflows.</div>
+                    <div class="description">As a Project Lead, I spearheaded the migration of a web-based map-making application to a desktop platform for TomTom, ensuring seamless functionality and performance. I supported development and upkeep of various map viewers, coordinated with project managers to integrate the final solution, and maintained team backlogs for effective task management. Additionally, I created newsletters to communicate product updates and changes across stakeholders.</div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <i class="fas fa-credit-card icon"></i>
+                    <h3>Team Lead</h3>
+                    <div class="company">Qpay</div>
+                    <div class="duration">Apr 2014 - Sep 2015</div>
+                    <div class="summary">Led development and integration of end-to-end payment solutions, supporting clients in digital transformation and e-commerce enablement.</div>
+                    <div class="description">As a Team Lead, I supervised the delivery of both acquiring and issuing payment solutions, ensuring robust and secure financial systems. I assisted clients in setting up their e-stores and integrating Qpay gateways into their existing platforms. My responsibilities included leading integrations with multiple banks and payment processors, and overseeing the complete software lifecycle—from estimation and design to development, code review, and deployment.</div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+                    <i class="fas fa-car icon"></i>
+                    <h3>System Engineer</h3>
+                    <div class="company">TCS</div>
+                    <div class="duration">Mar 2011 - Apr 2014</div>
+                    <div class="summary">Engineered cross-platform system integrations and analytical tools to support automotive interoperability and data-driven decisions.</div>
+                    <div class="description">As a System Engineer, I contributed to integrating systems for Fiat and Chrysler to enable seamless interoperability across platforms. I developed analytical tools to process after-sales data, supporting informed business decisions. My responsibilities included client interaction for project scope definition, end-to-end testing, and smooth delivery. I also led module estimation, design, and collaborated with cross-functional teams to ensure aligned and efficient development.</div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+                    <i class="fas fa-bolt icon"></i>
+                    <h3>Software Engineer</h3>
+                    <div class="company">USC India</div>
+                    <div class="duration">Aug 2009 - Oct 2010</div>
+                    <div class="summary">Built a legal management system to streamline expense tracking for the State Electricity Board.</div>
+                    <div class="description">As a Software Engineer, I developed a legal management system aimed at tracking and managing office expenses for the State Electricity Board. The system enhanced transparency, improved financial oversight, and reduced manual processing, contributing to operational efficiency and better legal documentation management.</div>
                 </div>
             </div>
         </section>
@@ -478,10 +738,9 @@
         <section class="section" id="languages" data-aos="fade-up">
             <h2>Languages</h2>
             <div class="languages">
-                <span class="language-tag" data-aos="zoom-in">English (Native)</span>
-                <span class="language-tag" data-aos="zoom-in" data-aos-delay="100">Spanish (Intermediate)</span>
-                <span class="language-tag" data-aos="zoom-in" data-aos-delay="200">French (Basic)</span>
-                <span class="language-tag" data-aos="zoom-in" data-aos-delay="300">Hindi (Fluent)</span>
+                <span class="language-tag" data-aos="zoom-in">English (Fluent)</span>
+                <span class="language-tag" data-aos="zoom-in" data-aos-delay="100">Hindi (Native)</span>
+                <span class="language-tag" data-aos="zoom-in" data-aos-delay="200">Japanese (Basic)</span>
             </div>
         </section>
     </div>
