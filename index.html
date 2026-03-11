@@ -1080,6 +1080,63 @@
     }
 
     /* ============================================================
+       ACHIEVEMENTS
+    ============================================================ */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .achievement-card {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: var(--transition);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 30px var(--orange-glow);
+      border-color: rgba(249,115,22,0.3);
+    }
+
+    .achievement-metric {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--orange), var(--orange-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .achievement-metric.sky {
+      background: linear-gradient(135deg, var(--sky), #7DD3FC);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .achievement-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .achievement-desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .achievement-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ============================================================
        CONTACT
     ============================================================ */
     #contact { background: var(--bg-secondary); }
@@ -1274,6 +1331,7 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1291,6 +1349,7 @@
   <a href="#skills"         class="mobile-link">Skills</a>
   <a href="#experience"     class="mobile-link">Experience</a>
   <a href="#projects"       class="mobile-link">Projects</a>
+  <a href="#achievements"   class="mobile-link">Achievements</a>
   <a href="#certifications" class="mobile-link">Certifications</a>
   <a href="#contact"        class="mobile-link">Contact</a>
 </div>
@@ -1671,11 +1730,12 @@
             <div class="exp-details-inner">
               <ul class="exp-bullets">
                 <li>Lead 3+ concurrent strategic programs coordinating cross-functional teams of 20+ engineers, PMs, QA, and designers</li>
-                <li>Pioneered AI-first delivery model using Claude Code, Cursor, GitLab Duo, and Antigravity — reducing sprint planning overhead by ~40% and accelerating release cycles</li>
+                <li>Led <strong>monolithic-to-AWS cloud migration</strong> — decomposed legacy monolith into microservices deployed on EC2, ECS, and RDS; implemented API Gateway + Lambda for event-driven workflows, S3 + CloudFront for asset delivery, and CloudWatch for observability — reducing infrastructure costs and enabling independent service scaling</li>
+                <li>Pioneered AI-first delivery model using Claude Code, Cursor, GitLab Duo, and Antigravity — achieving <strong>40% improvement in release cycle time</strong> and <strong>80% reduction in rollbacks</strong> through automated pre-deployment validation and AI-assisted QA pipelines</li>
+                <li>Deployed AI-assisted test case generation and QA automation — delivering <strong>zero production incidents over 6 consecutive months</strong> and a <strong>65% reduction in customer-reported deployment issues</strong></li>
                 <li>Defined program roadmaps, OKRs, and executive dashboards for real-time budget, scope, and delivery visibility</li>
                 <li>Managed program-level risk registers across 6+ workstreams, preventing critical-path delays through proactive resolution</li>
-                <li>Established engineering quality gates and release governance frameworks improving delivery predictability</li>
-                <li>Drove agile ceremonies, retrospectives, and continuous improvement initiatives</li>
+                <li>Built delivery playbooks and runbooks — documented engineering processes enabling faster onboarding of new team members and reducing dependency on tribal knowledge</li>
               </ul>
             </div>
           </div>
@@ -1917,6 +1977,67 @@
             <span class="pill pill-sky">J2EE</span>
           </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ACHIEVEMENTS
+============================================================ -->
+<section id="achievements" class="section">
+  <div class="container">
+    <div class="heading-line" aria-hidden="true"></div>
+    <p class="section-label">Impact by Numbers</p>
+    <h2 class="section-title">Key <span class="grad-text">Achievements</span></h2>
+    <p class="section-subtitle">
+      Measurable outcomes delivered at Inventum through AI-first delivery, cloud migration, and rigorous engineering governance.
+    </p>
+
+    <div class="achievements-grid">
+
+      <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="achievement-icon">📉</div>
+        <div class="achievement-metric">80%</div>
+        <div class="achievement-title">Reduction in Rollbacks</div>
+        <div class="achievement-desc">Redesigned release governance with automated pre-deployment validation — slashing rollback incidents by 80% and building deployment confidence across all active workstreams.</div>
+      </div>
+
+      <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="achievement-icon">🚀</div>
+        <div class="achievement-metric">40%</div>
+        <div class="achievement-title">Faster Release Cycles</div>
+        <div class="achievement-desc">Streamlined CI/CD pipelines with AI-assisted QA automation and eliminated manual bottlenecks — compressing release cycle time by 40% while maintaining all quality gates.</div>
+      </div>
+
+      <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="achievement-icon">🛡️</div>
+        <div class="achievement-metric sky">0</div>
+        <div class="achievement-title">Production Incidents in 6 Months</div>
+        <div class="achievement-desc">Deployed AI-assisted test generation and tighter release controls — achieving zero production incidents over six consecutive months and dramatically increasing deployment confidence.</div>
+      </div>
+
+      <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="achievement-icon">😊</div>
+        <div class="achievement-metric">65%</div>
+        <div class="achievement-title">Drop in Customer-Reported Issues</div>
+        <div class="achievement-desc">Overhauled QA with AI-driven test coverage and proactive defect detection — reducing customer-reported deployment issues by 65% and significantly improving satisfaction scores.</div>
+      </div>
+
+      <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="achievement-icon">☁️</div>
+        <div class="achievement-metric sky">AWS</div>
+        <div class="achievement-title">Monolith-to-Cloud Migration</div>
+        <div class="achievement-desc">Led full migration of legacy monolithic systems to AWS microservices on EC2, ECS, RDS, and Lambda — enabling independent scaling, reducing infrastructure costs, and improving system resilience.</div>
+      </div>
+
+      <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="achievement-icon">📚</div>
+        <div class="achievement-metric sky">KT</div>
+        <div class="achievement-title">Knowledge Transfer & Faster Onboarding</div>
+        <div class="achievement-desc">Built delivery playbooks, runbooks, and documented engineering processes — enabling new team members to ramp up significantly faster and reducing dependency on tribal knowledge.</div>
       </div>
 
     </div>
