@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yash Yadav — Technical Program Manager & Engineering Leader</title>
-  <meta name="description" content="Yash Yadav — AI-First Technical Program Manager and Engineering Leader with 16+ years of experience driving complex programs across Networking, E-Commerce, GIS, Manufacturing, and Banking." />
+  <title>Yash Yadav — Solutions Architect & Technical Program Manager</title>
+  <meta name="description" content="Yash Yadav — Solutions Architect & Technical Program Manager with 16+ years designing enterprise microservices, leading cloud migrations, and delivering AI-first engineering programs across Networking, Fintech, IoT, GIS, and Automotive." />
+  <meta name="keywords" content="Solutions Architect, Technical Program Manager, Java, Spring Boot, Microservices, AWS, Azure, Event-Driven, Strangler Fig, IoT, Fintech, AI Engineering, Claude Code, GitLab Duo" />
+  <meta property="og:title" content="Yash Yadav — Solutions Architect & Technical Program Manager" />
+  <meta property="og:description" content="16+ years designing enterprise microservices and leading AI-first engineering programs. OCJP · PMP · CSM · GenAI Certified." />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- AOS -->
@@ -961,6 +964,14 @@
       color: var(--text-primary);
     }
 
+    .project-arch {
+      font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #888888;
+      margin-top: 4px;
+      margin-bottom: 0.5rem;
+    }
+
     .project-desc {
       font-size: 0.85rem;
       color: var(--text-secondary);
@@ -1134,6 +1145,56 @@
     .achievement-icon {
       font-size: 1.5rem;
       margin-bottom: 0.25rem;
+    }
+
+    /* ============================================================
+       RESUME DOWNLOAD
+    ============================================================ */
+    .resume-download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 700px;
+    }
+
+    .resume-dl-card {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .resume-dl-card:hover { transform: translateY(-6px); }
+
+    .resume-dl-primary:hover { box-shadow: 0 0 30px var(--orange-glow); border-color: rgba(249,115,22,0.3); }
+    .resume-dl-secondary:hover { box-shadow: 0 0 30px var(--purple-glow); border-color: rgba(139,92,246,0.3); }
+
+    .resume-dl-icon {
+      font-size: 1.8rem;
+      color: var(--orange);
+    }
+
+    .resume-dl-secondary .resume-dl-icon { color: var(--purple-light); }
+
+    .resume-dl-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .resume-dl-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .resume-dl-btn {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
     }
 
     /* ============================================================
@@ -1333,6 +1394,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#achievements">Achievements</a></li>
       <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -1351,6 +1413,7 @@
   <a href="#projects"       class="mobile-link">Projects</a>
   <a href="#achievements"   class="mobile-link">Achievements</a>
   <a href="#certifications" class="mobile-link">Certifications</a>
+  <a href="#resume"         class="mobile-link">Resume</a>
   <a href="#contact"        class="mobile-link">Contact</a>
 </div>
 
@@ -1457,7 +1520,7 @@
           onerror="this.style.display='none'"
         />
         <h3>Yash Yadav</h3>
-        <p class="role-label">// Technical Program Manager</p>
+        <p class="role-label">// Solutions Architect · Technical Program Manager</p>
         <p>
           Seasoned Technical Program Manager with 16+ years driving complex programs across Networking,
           E-Commerce, GIS, Manufacturing, and Banking. I combine deep engineering roots (Java, Node.js,
@@ -1465,8 +1528,16 @@
         </p>
         <br />
         <p>
-          Based in Noida, India — open to global remote opportunities in TPM, Engineering Lead, and
-          Delivery Leadership roles.
+          With an OCJP-certified Java background and 16+ years hands-on across microservices, event-driven
+          architecture, AWS/Azure cloud migrations (Strangler Fig pattern), OAuth2/JWT API security, and
+          IoT middleware — I bring the rare ability to both architect the solution and lead the program
+          delivering it. I have designed and shipped systems across Fintech (PCI-DSS), Automotive
+          (SOX-compliant), GIS, Networking/ISP, IoT/EAC, and E-Commerce domains.
+        </p>
+        <br />
+        <p>
+          Based in Noida, India — open to Solutions Architect, Technical Program Manager, and Engineering
+          Leadership roles globally.
         </p>
       </div>
 
@@ -1635,64 +1706,69 @@
 
     <div class="skills-grid">
 
-      <!-- Core Competencies -->
+      <!-- Technical Architecture -->
       <div class="skills-col" data-aos="fade-up">
-        <h3 class="skills-col-title"><span class="grad-text">Core Competencies</span></h3>
+        <h3 class="skills-col-title"><span class="grad-text">Technical Architecture</span></h3>
         <div class="skill-tags">
-          <span class="skill-tag skill-tag-orange">Program &amp; Portfolio Management</span>
-          <span class="skill-tag skill-tag-orange">Agile / Scrum / Kanban</span>
-          <span class="skill-tag skill-tag-orange">Stakeholder Management</span>
-          <span class="skill-tag skill-tag-orange">Risk &amp; Issue Management</span>
-          <span class="skill-tag skill-tag-orange">Budget &amp; Resource Planning</span>
-          <span class="skill-tag skill-tag-orange">Strategic Roadmap Planning</span>
-          <span class="skill-tag skill-tag-orange">CI/CD &amp; Release Management</span>
-          <span class="skill-tag skill-tag-orange">Cross-Functional Collaboration</span>
-          <span class="skill-tag skill-tag-orange">Process Improvement</span>
-          <span class="skill-tag skill-tag-orange">Team Building &amp; Mentoring</span>
-          <span class="skill-tag skill-tag-orange">Technical Architecture Review</span>
-          <span class="skill-tag skill-tag-orange">Vendor Management</span>
+          <span class="skill-tag skill-tag-orange">Java · Spring Boot · Spring MVC</span>
+          <span class="skill-tag skill-tag-orange">Microservices</span>
+          <span class="skill-tag skill-tag-orange">Event-Driven Architecture</span>
+          <span class="skill-tag skill-tag-orange">Domain-Driven Design</span>
+          <span class="skill-tag skill-tag-orange">CQRS · Saga Pattern</span>
+          <span class="skill-tag skill-tag-orange">Strangler Fig Migration</span>
+          <span class="skill-tag skill-tag-orange">REST · SOAP · API-First</span>
+          <span class="skill-tag skill-tag-orange">OAuth2 · JWT · OWASP</span>
+          <span class="skill-tag skill-tag-orange">Node.js · Python · PHP</span>
+          <span class="skill-tag skill-tag-orange">Kafka · ActiveMQ · MQTT</span>
+          <span class="skill-tag skill-tag-orange">PCI-DSS · SOX</span>
         </div>
       </div>
 
-      <!-- AI & Modern Tools -->
+      <!-- AI Toolkit -->
       <div class="skills-col skills-col-ai" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="skills-col-title"><span class="grad-text-purple">AI &amp; Modern Tools</span></h3>
+        <h3 class="skills-col-title"><span class="grad-text-purple">AI Toolkit</span></h3>
         <div class="skill-tags">
           <span class="skill-tag skill-tag-purple">Claude Code</span>
           <span class="skill-tag skill-tag-purple">Cursor</span>
           <span class="skill-tag skill-tag-purple">GitLab Duo</span>
           <span class="skill-tag skill-tag-purple">Antigravity</span>
+          <span class="skill-tag skill-tag-purple">LLM APIs</span>
+          <span class="skill-tag skill-tag-purple">RAG / LangChain</span>
           <span class="skill-tag skill-tag-purple">Prompt Engineering</span>
-          <span class="skill-tag skill-tag-purple">LLM / API Integration</span>
-          <span class="skill-tag skill-tag-purple">AI-First Delivery</span>
-          <span class="skill-tag skill-tag-purple">GitHub Copilot</span>
+          <span class="skill-tag skill-tag-purple">Agentic Workflows</span>
         </div>
       </div>
 
-      <!-- Technical Stack -->
+      <!-- Cloud & DevOps -->
       <div class="skills-col" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="skills-col-title"><span class="grad-text-sky">Technical Stack</span></h3>
+        <h3 class="skills-col-title"><span class="grad-text-sky">Cloud &amp; DevOps</span></h3>
         <div class="skill-tags">
-          <span class="skill-tag skill-tag-sky">Java</span>
-          <span class="skill-tag skill-tag-sky">Node.js</span>
-          <span class="skill-tag skill-tag-sky">Python</span>
-          <span class="skill-tag skill-tag-sky">PHP</span>
-          <span class="skill-tag skill-tag-sky">React.js</span>
-          <span class="skill-tag skill-tag-sky">Angular</span>
-          <span class="skill-tag skill-tag-sky">AWS</span>
-          <span class="skill-tag skill-tag-sky">Docker</span>
-          <span class="skill-tag skill-tag-sky">Kubernetes</span>
-          <span class="skill-tag skill-tag-sky">PostgreSQL</span>
-          <span class="skill-tag skill-tag-sky">MongoDB</span>
-          <span class="skill-tag skill-tag-sky">Redis</span>
-          <span class="skill-tag skill-tag-sky">Jenkins</span>
+          <span class="skill-tag skill-tag-sky">AWS EC2 · ECS · Lambda</span>
+          <span class="skill-tag skill-tag-sky">AWS RDS · S3 · CloudFront</span>
+          <span class="skill-tag skill-tag-sky">AWS API Gateway · CloudWatch</span>
+          <span class="skill-tag skill-tag-sky">Azure App Service · AKS</span>
+          <span class="skill-tag skill-tag-sky">Azure DevOps · Azure AD</span>
+          <span class="skill-tag skill-tag-sky">Docker · Kubernetes</span>
           <span class="skill-tag skill-tag-sky">Terraform</span>
-          <span class="skill-tag skill-tag-sky">Git / GitHub / GitLab</span>
-          <span class="skill-tag skill-tag-sky">Jira</span>
-          <span class="skill-tag skill-tag-sky">Confluence</span>
-          <span class="skill-tag skill-tag-sky">REST APIs</span>
-          <span class="skill-tag skill-tag-sky">Microservices</span>
-          <span class="skill-tag skill-tag-sky">Kafka / ActiveMQ</span>
+          <span class="skill-tag skill-tag-sky">Jenkins · GitHub Actions · GitLab CI</span>
+          <span class="skill-tag skill-tag-sky">PostgreSQL · MongoDB · Redis</span>
+          <span class="skill-tag skill-tag-sky">ElasticSearch · Oracle · IBM DB2</span>
+        </div>
+      </div>
+
+      <!-- Program & Delivery -->
+      <div class="skills-col" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="skills-col-title"><span class="grad-text">Program &amp; Delivery</span></h3>
+        <div class="skill-tags">
+          <span class="skill-tag skill-tag-orange">PMP · CSM</span>
+          <span class="skill-tag skill-tag-orange">Agile · Scrum · Kanban</span>
+          <span class="skill-tag skill-tag-orange">Stakeholder Management</span>
+          <span class="skill-tag skill-tag-orange">Risk &amp; Issue Management</span>
+          <span class="skill-tag skill-tag-orange">OKR-Driven Roadmaps</span>
+          <span class="skill-tag skill-tag-orange">Budget &amp; P&amp;L Ownership</span>
+          <span class="skill-tag skill-tag-orange">Cross-Functional Leadership</span>
+          <span class="skill-tag skill-tag-orange">Vendor Management</span>
+          <span class="skill-tag skill-tag-orange">CI/CD &amp; Release Governance</span>
         </div>
       </div>
 
@@ -1891,6 +1967,7 @@
         </div>
         <div class="project-body">
           <div class="project-title">Unify</div>
+          <div class="project-arch">// Strangler Fig Migration · AWS ECS · Multi-tenant Microservices</div>
           <p class="project-desc">Integrated Operations &amp; Billing Platform for ISPs and service providers. Real-time analytics, subscriber management, billing automation.</p>
           <div class="project-tags">
             <span class="pill pill-orange">SaaS</span>
@@ -1907,6 +1984,7 @@
         </div>
         <div class="project-body">
           <div class="project-title">Udaya</div>
+          <div class="project-arch">// IoT · Event-Driven Architecture · Real-time Analytics · Node.js</div>
           <p class="project-desc">Managed Wi-Fi solution for businesses, social zones, and visitor hotspots with captive portal and analytics.</p>
           <div class="project-tags">
             <span class="pill pill-orange">Networking</span>
@@ -1923,6 +2001,7 @@
         </div>
         <div class="project-body">
           <div class="project-title">MSG Gateway</div>
+          <div class="project-arch">// Networking · Hotspot Management · Enterprise Wi-Fi</div>
           <p class="project-desc">Hotspot Gateway Management System for enterprise-scale Wi-Fi deployments.</p>
           <div class="project-tags">
             <span class="pill pill-orange">Gateway</span>
@@ -1938,6 +2017,7 @@
         </div>
         <div class="project-body">
           <div class="project-title">DSR Smart Locks</div>
+          <div class="project-arch">// IoT Middleware · MQTT / ActiveMQ · OAuth2 · ASSA ABLOY R3 Protocol</div>
           <p class="project-desc">Middleware enabling EAC systems to communicate with ASSA ABLOY smart locks via MQTT and ActiveMQ.</p>
           <div class="project-tags">
             <span class="pill pill-orange">IoT</span>
@@ -1953,7 +2033,8 @@
           <img src="eshop.jpg" alt="eShop" class="project-img" onerror="this.parentElement.innerHTML='<i class=\'fas fa-shopping-cart\'></i>'" />
         </div>
         <div class="project-body">
-          <div class="project-title">eShop</div>
+          <div class="project-title">eShop (Gateman Korea)</div>
+          <div class="project-arch">// E-Commerce · Magento B2C · Multi-region · PIM Integration</div>
           <p class="project-desc">B2C E-Commerce platform for purchasing smart locks and accessories. Magento/PHP based.</p>
           <div class="project-tags">
             <span class="pill pill-orange">E-Commerce</span>
@@ -1969,7 +2050,8 @@
           <img src="wis.jpg" alt="WIS" class="project-img" onerror="this.parentElement.innerHTML='<i class=\'fas fa-chart-bar\'></i>'" />
         </div>
         <div class="project-body">
-          <div class="project-title">WIS</div>
+          <div class="project-title">WIS (Chrysler)</div>
+          <div class="project-arch">// J2EE · SOX-Compliant · EBSC Analytics Engine · Stellantis Procurement</div>
           <p class="project-desc">Chrysler Warranty Information System for after-sales analytics and strategic business decisions.</p>
           <div class="project-tags">
             <span class="pill pill-orange">Analytics</span>
@@ -2028,9 +2110,9 @@
 
       <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="80">
         <div class="achievement-icon">☁️</div>
-        <div class="achievement-metric sky">AWS</div>
-        <div class="achievement-title">Monolith-to-Cloud Migration</div>
-        <div class="achievement-desc">Led full migration of legacy monolithic systems to AWS microservices on EC2, ECS, RDS, and Lambda — enabling independent scaling, reducing infrastructure costs, and improving system resilience.</div>
+        <div class="achievement-metric sky">AWS+Azure</div>
+        <div class="achievement-title">Monolith → Cloud Migration (AWS + Azure)</div>
+        <div class="achievement-desc">Led full migration of legacy monolithic systems to cloud-native microservices. Used the Strangler Fig pattern — incrementally routing traffic via API Gateway facade while decomposing services. Zero-downtime production cutover across AWS (ECS, Lambda, RDS, CloudFront) and Azure (DevOps, AKS, Azure AD).</div>
       </div>
 
       <div class="glass-card achievement-card" data-aos="fade-up" data-aos-delay="160">
@@ -2135,6 +2217,9 @@
 </section>
 
 
+
+
+
 <!-- ============================================================
      CONTACT
 ============================================================ -->
@@ -2144,7 +2229,7 @@
     <p class="section-label">Get In Touch</p>
     <h2 class="section-title">Let's <span class="grad-text">Connect</span></h2>
     <p class="section-subtitle">
-      Open to Program Manager, Engineering Lead, and Delivery Leadership opportunities globally.
+      Open to Solutions Architect, Technical Program Manager, and Engineering Leadership roles globally.
     </p>
 
     <div class="contact-grid">
@@ -2221,6 +2306,7 @@ AOS.init({ duration: 800, once: true, offset: 60 });
 ============================================================ */
 new Typed('#typed-el', {
   strings: [
+    'Solutions Architect',
     'Technical Program Manager',
     'Engineering Leader',
     'Strategic Delivery Expert',
